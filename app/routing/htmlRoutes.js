@@ -13,11 +13,4 @@ app.get("/index", function(req, res) {
   });
 
 
-//post route /api/friends used to handle incoming survey results. this route also handles the compatibility logic.
-
-
-    // loop over friends array
-      // inside that loop, loop over friends[i].surveyResponsesArray
-      //compare each survey response with the survey response of the user
-      //keep a running total
 
