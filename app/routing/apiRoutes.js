@@ -38,7 +38,8 @@ module.exports = function(app) {
   // ---------------------------------------------------------------------------
 
   app.post("/api/friends", function(req, res) {
-      console.log("Working")
+      console.log("Working");
+      
  //app.post to get the information from the submit button 
 //meat of the JS code 
 //post route /api/friends used to handle incoming survey results. this route also handles the compatibility logic.

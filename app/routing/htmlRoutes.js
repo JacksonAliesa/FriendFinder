@@ -10,6 +10,10 @@ app.get("/survey", function(req, res) {
 // a default, catch-all route that leads to index.html which displays the home page
 /////code here
 
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "../public/index.html"));
+});
+
 }
 
 
