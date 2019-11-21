@@ -325,12 +325,41 @@
 
      <!--for user to submit results after all questions are answered-->
      <div class="container">
-            <button type="button" class="btn btn-secondary btn-lg btn-block bg-info text-warning">Submit Results</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block bg-info text-warning" id="submitBtn">Submit Results</button>
      </div>
 
      <br>
      <br>
 
+
+     <script type="text/javascript">
+     //how could I set up my onclick for submit to capture results?
+        $("#submitBtn").on("click", function (event) {
+          event.preventDefault();
+          var userResults = {
+            name: $("#name").val().trim(),
+            phoneNumber: $("#phoneNumber").val().trim(),
+            email: $("#email").val().trim(),
+            uniqueID: $("#uniqueID").val().trim()
+          };
+    
+    //would I use post here?
+          $.get("/api/friends", userResults)
+            .then(function (data) {
+              console.log("make.html", data);
+              var currentRes = 
+              alert("Adding Reservation...");
+            });
+        });
+      </script>
+
+
+    ​<!--links for API info-->
+<footer class="footer">
+        <div class="container">
+          <p><a href="/api/friends">API Friend Link</a> 
+        </div>
+      </footer>
         
     
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
