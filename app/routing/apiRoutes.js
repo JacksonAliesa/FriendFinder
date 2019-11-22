@@ -39,20 +39,27 @@ module.exports = function(app) {
 
   app.post("/api/friends", function(req, res) {
       console.log("Working");
-      
+      console.log(res.JSON(userResults));
+      console.log(res);
+
  //app.post to get the information from the submit button 
 //meat of the JS code 
 //post route /api/friends used to handle incoming survey results. this route also handles the compatibility logic.
     // loop over friends array
+    for(var i = 0; i < friendsArray.length; i++){
+      var sum = 0;
       // inside that loop, loop over friends[i].surveyResponsesArray
-      //compare each survey response with the survey response of the user
+      for(var j = 0; j < friends[i].surveyResults; j++){
+         //compare each survey response with the survey response of the user
+         sum = Math.abs(friendsArray[i] - surveyResults[j].scores[i])
+      }
+    console.log(sum);
+    }
       //keep a running total
-  });
+    });
+    //end of app-post function
 
-
-}
-
-
+   }
 
 
     
