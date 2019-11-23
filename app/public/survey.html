@@ -18,6 +18,17 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 
+      <!-- jQuery first, then Popper.js, then Bootstrap JS --> 
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script> -->
+
 </head>
 
 <body>
@@ -194,7 +205,7 @@
         <br>
         <br>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="6"  value="1">
+          <input class="form-check-input" type="radio" name="6" value="1">
           <label class="form-check-label" for="inlineCheckbox1">1-Strongly Disagree</label>
         </div>
         <div class="form-check form-check-inline">
@@ -336,12 +347,14 @@
 
   <!--for user to submit results after all questions are answered-->
   <div class="container">
-    <button type="button" class="btn btn-secondary btn-lg btn-block bg-info text-white" id="submitBtn" data-target="#bestMatchModal">Submit
+    <button type="button" class="btn btn-secondary btn-lg btn-block bg-info text-white" id="submitBtn"
+      data-toggle="modal" data-target="#bestMatchModal">Submit
       Results</button>
   </div>
 
   <!-- Modal -->
-<div class="modal fade" id="bestMatchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="bestMatchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -351,7 +364,9 @@
           </button>
         </div>
         <div class="modal-body">
-          ...
+          <!-- //give it an ID to populate in modal -->
+          <h3 id="friendName">Name:</h3>
+          <h5>Image</h5>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -389,23 +404,20 @@
 
       console.log(userResults);
 
-    // ERROR saying that .post is not a function
-      $.post("/api/friends", userResults, function (data) {
-        if (data){
-          console.log("Adding to the DB!")
+      $.post("/api/friends", userResults)
+        .then(function(data) {
+          console.log("Adding to the DB!");
           console.log(data);
-
-        }          
+          
+          // $("#friendName").text();
+          // add .attr to apply img in modal & img FLUID
           //data is going to be user's best match
           //display that information in a modal
           //name and image
-
         });
-    });
+      });
   </script>
-
-
-  ​
+​
   <!--links for API info-->
   <footer class="footer">
     <div class="container">
@@ -414,16 +426,7 @@
   </footer>
 
 
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script> -->
+
 </body>
 
 </html>
