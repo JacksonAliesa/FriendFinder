@@ -47,11 +47,14 @@ module.exports = function(app) {
 //post route /api/friends used to handle incoming survey results. this route also handles the compatibility logic.
     
     //this gets replaced after we find the difference of the 2 scores only IF it is lower
-    var bestMatch = Infinity;
+   
     //closest score will be replaced with the best match score 
     var difference = 0;
-
+    var closestMatch = 50;
+    var closestScore = 0;
     var userScore = req.body;
+
+    
 
   
 
@@ -72,24 +75,27 @@ module.exports = function(app) {
         };
         console.log("this is the difference:")
         console.log(difference);
-
+      
         
-        if(difference < bestMatch){
-         bestFriend = friendData[i];
+        if(difference < closestMatch){
+          console.log("within if statement:")
+        closestMatch = difference;
+        closestScore = i;
+        
     }
-
+    
 
 }
 //end of first for loop
+
+
+//best match friend object that needs to be pushed to the front end
+   res.json(friendData[closestScore]);
   
-    //   //keep a running total
     //push to friends array
-    friendData.push(req.body);
-    //   //need to know who has less of a difference from the friends array VS the user input - (from the friend array)the closest match will be the one 
-    //   //with least amt of difference
-    // repersent which friend it is ...the i from the friends array
-     
-      //another if this bestmatchscore < bestmatchindex reassign the friend
+    friendData.push(userScore);
+
+  
     });
     //end of app-post function
 

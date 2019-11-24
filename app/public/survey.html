@@ -201,7 +201,7 @@
           <div class="modal-body">
             <!-- //give it an ID to populate in modal -->
             <h3 id="friendName">Name:</h3>
-            <h5>Image</h5>
+            <h5 id="friendImg">DISPLAY HERE</h5>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -249,10 +249,11 @@
 
         $.post("/api/friends", userResults,
           function (data) {
-            console.log("Adding to the DB!");
+            
             console.log(data);
 
-            // $("#friendName").text();
+            $("#friendName").text(data.name);
+            $("#friendImg").attr(data.photo);
             // add .attr to apply img in modal & img FLUID
             //data is going to be user's best match
             //display that information in a modal
