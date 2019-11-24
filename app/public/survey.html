@@ -18,7 +18,7 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 
-      <!-- jQuery first, then Popper.js, then Bootstrap JS --> 
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -38,6 +38,7 @@
       <div class="container">
         <center>
           <h1 class="display-4 text-white">Survey Questions</h1>
+          <h5 class="text-white">1-Strongly Agree 2-Agree 3-Indifferent 4-Disagree 5-Strongly Disagree</h5>
         </center>
       </div>
     </div>
@@ -53,377 +54,222 @@
         <label for="imageInput">Link to Photo Image (Required)</label>
         <input type="text" class="form-control" id="imageInput" placeholder="Image Link">
       </div>
+      <!-- </form> -->
+
+      <!--10 questions start here-->
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">I believe family is everthing.</label>
+        <select class="form-control" id="q1">
+          <option>Select Here</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">"Work Hard, Play Later" is a moto you live by.</label>
+        <select class="form-control" id="q2">
+          <option>Select Here</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+
+
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Being noble is important to me.</label>
+        <select class="form-control" id="q3">
+          <option>Select Here</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">I see the glass half full not half empty.</label>
+        <select class="form-control" id="q4">
+          <option>Select Here</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">I make mistakes.</label>
+        <select class="form-control" id="q5">
+          <option>Select Here</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">I believe there is no I in Team.</label>
+        <select class="form-control" id="q6">
+          <option>Select Here</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">You can agree that practice makes perfect.</label>
+        <select class="form-control" id="q7">
+          <option>Select Here</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">I am always right.</label>
+        <select class="form-control" id="q8">
+          <option>Select Here</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">When I fail I get up and try again.</label>
+        <select class="form-control" id="q9">
+          <option>Select Here</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">I perfect my craft daily.</label>
+        <select class="form-control" id="q10">
+          <option>Select Here</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+
     </form>
 
+    <!--for user to submit results after all questions are answered-->
+    <div class="container">
+      <button type="button" class="btn btn-secondary btn-lg btn-block bg-info text-white" id="submitBtn"
+        data-toggle="modal" data-target="#bestMatchModal">Submit
+        Results</button>
+    </div>
 
-    <!-- 10 Questions start here-->
-    <div class="card">
-      <div class="card-body bg secondary">
-        Question 1: Does frustration during a task make you quit the task?
-        <br>
-        <br>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="1" value="1">
-          <label class="form-check-label" for="inlineCheckbox1">1-Strongly Disagree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="1" value="2">
-          <label class="form-check-label" for="inlineCheckbox2">2-Disagree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="1" value="3">
-          <label class="form-check-label" for="inlineCheckbox3">3-Indifferent</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="1" value="4">
-          <label class="form-check-label" for="inlineCheckbox3">4-Agree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="1" value="5">
-          <label class="form-check-label" for="inlineCheckbox3">5-Strongly Agree</label>
+    <!-- Modal -->
+    <div class="modal fade" id="bestMatchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">MATCH:</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- //give it an ID to populate in modal -->
+            <h3 id="friendName">Name:</h3>
+            <h5>Image</h5>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="card">
-      <div class="card-body">
-        Question 2: Do you let a loss/failure dictate your current mood?
-        <br>
-        <br>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="2" value="1">
-          <label class="form-check-label" for="inlineCheckbox1">1-Strongly Disagree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="2" value="2">
-          <label class="form-check-label" for="inlineCheckbox2">2-Disagree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="2" value="3">
-          <label class="form-check-label" for="inlineCheckbox3">3-Indifferent</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="2" value="4">
-          <label class="form-check-label" for="inlineCheckbox3">4-Agree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="2" value="5">
-          <label class="form-check-label" for="inlineCheckbox3">5-Strongly Agree</label>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-body">
-        Question 3: Do you believe practice makes perfect?
-        <br>
-        <br>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="3" value="1">
-          <label class="form-check-label" for="inlineCheckbox1">1-Strongly Disagree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="3" value="2">
-          <label class="form-check-label" for="inlineCheckbox2">2-Disagree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="3" value="3">
-          <label class="form-check-label" for="inlineCheckbox3">3-Indifferent</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="3" value="4">
-          <label class="form-check-label" for="inlineCheckbox3">4-Agree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="3" value="5">
-          <label class="form-check-label" for="inlineCheckbox3">5-Strongly Agree</label>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-body">
-        Question 4: Does failure mean quit?
-        <br>
-        <br>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="4" value="1">
-          <label class="form-check-label" for="inlineCheckbox1">1-Strongly Disagree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="4" value="2">
-          <label class="form-check-label" for="inlineCheckbox2">2-Disagree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="4" value="3">
-          <label class="form-check-label" for="inlineCheckbox3">3-Indifferent</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="4" value="4">
-          <label class="form-check-label" for="inlineCheckbox3">4-Agree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="4" value="5">
-          <label class="form-check-label" for="inlineCheckbox3">5-Strongly Agree</label>
-        </div>
-      </div>
-    </div>
+    <!--jquery/onclick-->
+    <script type="text/javascript">
+      $("#submitBtn").on("click", function (event) {
+        event.preventDefault();
+        // var surveyResults = [];
+        // surveyResults.push(parseInt($(':radio[name=1]:checked').val()));
+        // surveyResults.push(parseInt($(':radio[name=2]:checked').val()));
+        // surveyResults.push(parseInt($(':radio[name=3]:checked').val()));
+        // surveyResults.push(parseInt($(':radio[name=4]:checked').val()));
+        // surveyResults.push(parseInt($(':radio[name=5]:checked').val()));
+        // surveyResults.push(parseInt($(':radio[name=6]:checked').val()));
+        // surveyResults.push(parseInt($(':radio[name=7]:checked').val()));
+        // surveyResults.push(parseInt($(':radio[name=8]:checked').val()));
+        // surveyResults.push(parseInt($(':radio[name=9]:checked').val()));
+        // surveyResults.push(parseInt($(':radio[name=10]:checked').val()));
 
 
-    <div class="card">
-      <div class="card-body">
-        Question 5: Are you family oriented?
-        <br>
-        <br>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="5" value="1">
-          <label class="form-check-label" for="inlineCheckbox1">1-Strongly Disagree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="5" value="2">
-          <label class="form-check-label" for="inlineCheckbox2">2-Disagree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="5" value="3">
-          <label class="form-check-label" for="inlineCheckbox3">3-Indifferent</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="5" value="4">
-          <label class="form-check-label" for="inlineCheckbox3">4-Agree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="5" value="5">
-          <label class="form-check-label" for="inlineCheckbox3">5-Strongly Agree</label>
-        </div>
-      </div>
-    </div>
+        //this info must match the friends array
+        var userResults = {
+          name: $("#nameInput").val(),
+          photo: $("#imageInput").val(),
+          scores: [
+            $("#q1").val(),
+            $("#q2").val(),
+            $("#q3").val(),
+            $("#q4").val(),
+            $("#q5").val(),
+            $("#q6").val(),
+            $("#q7").val(),
+            $("#q8").val(),
+            $("#q9").val(),
+            $("#q10").val()
+          ]
+        };
 
+        console.log(userResults);
 
-    <div class="card">
-      <div class="card-body">
-        Question 6: Can you learn life lessons through failure?
-        <br>
-        <br>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="6" value="1">
-          <label class="form-check-label" for="inlineCheckbox1">1-Strongly Disagree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="6" value="2">
-          <label class="form-check-label" for="inlineCheckbox2">2-Disagree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="6" value="3">
-          <label class="form-check-label" for="inlineCheckbox3">3-Indifferent</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="6" value="4">
-          <label class="form-check-label" for="inlineCheckbox3">4-Agree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="6" value="5">
-          <label class="form-check-label" for="inlineCheckbox3">5-Strongly Agree</label>
-        </div>
-      </div>
-    </div>
+        $.post("/api/friends", userResults,
+          function (data) {
+            console.log("Adding to the DB!");
+            console.log(data);
 
+            // $("#friendName").text();
+            // add .attr to apply img in modal & img FLUID
+            //data is going to be user's best match
+            //display that information in a modal
+            //name and image
+          });
+      });
+    </script>
 
-    <div class="card">
-      <div class="card-body">
-        Question 7: Do you give up easily?
-        <br>
-        <br>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="7" value="1">
-          <label class="form-check-label" for="inlineCheckbox1">1-Strongly Disagree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="7" value="2">
-          <label class="form-check-label" for="inlineCheckbox2">2-Disagree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="7" value="3">
-          <label class="form-check-label" for="inlineCheckbox3">3-Indifferent</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="7" value="4">
-          <label class="form-check-label" for="inlineCheckbox3">4-Agree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="7" value="5">
-          <label class="form-check-label" for="inlineCheckbox3">5-Strongly Agree</label>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="card">
-      <div class="card-body">
-        Question 8: Do you handle yourself well under pressure?
-        <br>
-        <br>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="8" value="1">
-          <label class="form-check-label" for="inlineCheckbox1">1-Strongly Disagree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="8" value="2">
-          <label class="form-check-label" for="inlineCheckbox2">2-Disagree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="8" value="3">
-          <label class="form-check-label" for="inlineCheckbox3">3-Indifferent</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="8" value="4">
-          <label class="form-check-label" for="inlineCheckbox3">4-Agree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="8" value="5">
-          <label class="form-check-label" for="inlineCheckbox3">5-Strongly Agree</label>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-body">
-        Question 9: Is Michael Jordan the best player to ever play?
-        <br>
-        <br>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="9" value="1">
-          <label class="form-check-label" for="inlineCheckbox1">1-Strongly Disagree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="9" value="2">
-          <label class="form-check-label" for="inlineCheckbox2">2-Disagree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="9" value="3">
-          <label class="form-check-label" for="inlineCheckbox3">3-Indifferent</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="9" value="4">
-          <label class="form-check-label" for="inlineCheckbox3">4-Agree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="9" value="5">
-          <label class="form-check-label" for="inlineCheckbox3">5-Strongly Agree</label>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-body">
-        Question 10: Can you learn from others?
-        <br>
-        <br>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="10" value="1">
-          <label class="form-check-label" for="inlineCheckbox1">1-Strongly Disagree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="10" value="2">
-          <label class="form-check-label" for="inlineCheckbox2">2-Disagree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="10" value="3">
-          <label class="form-check-label" for="inlineCheckbox3">3-Indifferent</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="10" value="4">
-          <label class="form-check-label" for="inlineCheckbox3">4-Agree</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="10" value="5">
-          <label class="form-check-label" for="inlineCheckbox3">5-Strongly Agree</label>
-        </div>
-      </div>
-    </div>
 
 
     ​
-  </div>
-
-  <!--for user to submit results after all questions are answered-->
-  <div class="container">
-    <button type="button" class="btn btn-secondary btn-lg btn-block bg-info text-white" id="submitBtn"
-      data-toggle="modal" data-target="#bestMatchModal">Submit
-      Results</button>
-  </div>
-
-  <!-- Modal -->
-  <div class="modal fade" id="bestMatchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">MATCH:</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <!-- //give it an ID to populate in modal -->
-          <h3 id="friendName">Name:</h3>
-          <h5>Image</h5>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
+    <!--links for API info-->
+    <footer class="footer">
+      <div class="container">
+        <p><a href="/api/friends">API Friend Link</a>
       </div>
-    </div>
-  </div>
-
-  <br>
-  <br>
-
-
-  <script type="text/javascript">
-    $("#submitBtn").on("click", function (event) {
-      event.preventDefault();
-      var surveyResults = [];
-      surveyResults.push(parseInt($(':radio[name=1]:checked').val()));
-      surveyResults.push(parseInt($(':radio[name=2]:checked').val()));
-      surveyResults.push(parseInt($(':radio[name=3]:checked').val()));
-      surveyResults.push(parseInt($(':radio[name=4]:checked').val()));
-      surveyResults.push(parseInt($(':radio[name=5]:checked').val()));
-      surveyResults.push(parseInt($(':radio[name=6]:checked').val()));
-      surveyResults.push(parseInt($(':radio[name=7]:checked').val()));
-      surveyResults.push(parseInt($(':radio[name=8]:checked').val()));
-      surveyResults.push(parseInt($(':radio[name=9]:checked').val()));
-      surveyResults.push(parseInt($(':radio[name=10]:checked').val()));
-
-
-      //this info must match the friends array
-      var userResults = {
-        name: $("#nameInput").val(),
-        photo: $("#imageInput").val(),
-        scores: surveyResults
-      };
-
-      console.log(userResults);
-
-      $.post("/api/friends", userResults)
-        .then(function(data) {
-          console.log("Adding to the DB!");
-          console.log(data);
-          
-          // $("#friendName").text();
-          // add .attr to apply img in modal & img FLUID
-          //data is going to be user's best match
-          //display that information in a modal
-          //name and image
-        });
-      });
-  </script>
-​
-  <!--links for API info-->
-  <footer class="footer">
-    <div class="container">
-      <p><a href="/api/friends">API Friend Link</a>
-    </div>
-  </footer>
+    </footer>
 
 
 
